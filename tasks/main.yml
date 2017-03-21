@@ -1,0 +1,25 @@
+---
+
+- name: Add Google public key
+  become: yes
+  rpm_key:
+    state: present
+    key: https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+- name: Add Google repository
+  become: yes
+  yum_repository:
+    name: google-chrome
+    file: google-chrome
+    description: google-chrome - \$basearch
+    baseurl: http://dl.google.com/linux/chrome/rpm/stable/\$basearch
+    enabled: false
+    gpgcheck: false
+    gpgkey: https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+- name: Install Google Chrome
+  become: yes
+  dnf:
+    name: "{{ google_chrome_version }}"
+    enablerepo: google-chrome
+    state: "{{ google_chrome_update }}"

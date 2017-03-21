@@ -1,0 +1,7 @@
+---
+
+# Keep Google Chrome update (present | latest | absent).
+google_chrome_update: latest
+
+# Google Chrome channel (google-chrome-stable | google-chrome-beta | google-chrome-unstable).
+google_chrome_version: google-chrome-stable
