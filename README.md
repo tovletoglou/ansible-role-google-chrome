@@ -42,4 +42,4 @@ MIT
 
 ## Author Information
 
-Apostolos Tovletoglou [ansible-role-google-chrome](https://github.com/tovletoglou/ansible-google-chrome)
+Apostolos Tovletoglou [ansible-role-google-chrome](https://github.com/tovletoglou/ansible-role-google-chrome)
