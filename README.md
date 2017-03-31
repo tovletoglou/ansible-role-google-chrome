@@ -12,18 +12,21 @@ The role may run on other systems, but it is not tested.
 
 ## Role Variables
 
-Keep Google Chrome update (present | latest | absent).
-```
+Keep Google Chrome update (`present | latest | absent`).
+
+```yml
 google_chrome_update: latest
 ```
-Google Chrome channel (google-chrome-stable | google-chrome-beta | google-chrome-unstable).
-```
+
+Google Chrome channel (`google-chrome-stable | google-chrome-beta | google-chrome-unstable`).
+
+```yml
 google_chrome_version: google-chrome-stable
 ```
 
 ## Example
 
-```
+```yml
 - hosts: all
   roles:
     - ansible-role-google-chrome
