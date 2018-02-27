@@ -1,5 +1,8 @@
 ---
 
+# Keep Google Chrome repo enabled (true | false)
+google_chrome_keep_repo_enabled: true
+
 # Keep Google Chrome update (present | latest | absent).
 google_chrome_update: latest
 

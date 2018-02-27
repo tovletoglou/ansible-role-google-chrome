@@ -4,7 +4,7 @@
   become: yes
   rpm_key:
     state: present
-    key: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    key: https://dl.google.com/linux/linux_signing_key.pub
 
 - name: Add Google repository
   become: yes
@@ -13,8 +13,8 @@
     file: google-chrome
     description: google-chrome - \$basearch
     baseurl: http://dl.google.com/linux/chrome/rpm/stable/\$basearch
-    enabled: false
-    gpgcheck: false
+    enabled: "{{ google_chrome_keep_repo_enabled }}"
+    gpgcheck: true
     gpgkey: https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 - name: Install Google Chrome
